@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      //주어진 수 중 홀수만 골라서 홀수들의 합과 최솟값을 구해라.
+
+      function solution(arr) {
+        let oddArr = arr.filter((n) => n % 2 !== 0);
+        let answer = Math.min(...oddArr);
+        let sum = 0;
+
+        for (let i = 0; i < oddArr.length; i++) {
+          sum = sum + oddArr[i];
+        }
+        return [sum, answer];
+      }
+
+      arr = [12, 77, 38, 41, 53, 92, 85];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>
