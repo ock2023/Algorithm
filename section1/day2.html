@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(a, b, c) {
+        //삼각형의 세 변의 길이가 주어졌을 때, 가장 긴 변의 길이(max)가 나머지 두 변의 길이(sum - max)의 합보다 작아야 삼각형이 가능하다
+        //가장 긴 변의 길이가 어떤 것인지 모름.
+        //Math.max - 제일 큰 수를 반환
+
+        let answer = "YES";
+        let sum = a + b + c;
+        let max = Math.max(a, b, c);
+        if (max > sum - max) return "NO";
+        else return answer;
+      }
+
+      console.log(solution(6, 7, 11));
+    </script>
+  </body>
+</html>
