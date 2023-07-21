@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(day, arr) {
+        //첫번째 인자의 숫자와 배열에 나열된 각 인자들의 일의자리 숫자가 일치하는 것 골라내어 수 구하기.
+        let answer = 0;
+        for (let n of arr) {
+          if (n % 10 === day) answer++;
+        }
+        return answer;
+      }
+      //새로 알게된 지식: 어떤 숫자든 10으로 나누면 나머지는 숫자의 1의 자리와 같다.
+      arr = [12, 20, 54, 30, 87, 91, 30];
+      console.log(solution(0, arr));
+    </script>
+  </body>
+</html>
